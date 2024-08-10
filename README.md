@@ -1,2 +1,2 @@
 # algorithm-practice
-Daily algorithm practice solutions
+Daily (almost) algorithm practice solutions
