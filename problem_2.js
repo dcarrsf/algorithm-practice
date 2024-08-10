@@ -22,7 +22,16 @@ Follow-up: what if you can't use division?
 //             (j !==i)).reduce((a, n) => (a * n), 1));
 // }
 
-// 2ND ATTEMPT O(N) WITHOUT DIVISION
+// 2ND ATTEMPT O(N)
+
+function runSolution(numbers = []) {
+    if (!numbers.length) return [];
+    const finalProduct = numbers.reduce((a, n) => (a * n), 1);
+    return numbers.map(n => (finalProduct / n));
+}
+
+
+// 3RD ATTEMPT O(N) WITHOUT DIVISION
 
 // function runSolution(numbers = []) {
 //     if (!numbers.length) return [];
@@ -40,14 +49,6 @@ Follow-up: what if you can't use division?
 //     }
 //     return results;
 // }
-
-// 3RD ATTEMPT O(N)
-
-function runSolution(numbers = []) {
-    if (!numbers.length) return [];
-    const finalProduct = numbers.reduce((a, n) => (a * n), 1);
-    return numbers.map(n => (finalProduct / n));
-}
 
 assert( _.isEqual(runSolution([1, 2, 3, 4, 5]), [120, 60, 40, 30, 24]) );
 assert( _.isEqual(runSolution([3, 2, 1]), [2, 3, 6]) );
